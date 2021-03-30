@@ -1,3 +1,6 @@
+from cats import cat1
+
+
 class PlayerCharacter:
     # Class Object Attribute
     membership = True
@@ -38,6 +41,7 @@ all_players = {
 for player in all_players:
     pass
     print(f"{player.name} is {player.color} their age is {player.age} their attack power is {player.attack}.")
+    print(cat1.name)
     # print(player.shout())
     # print(player.run())
     # print(player.kill())
