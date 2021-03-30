@@ -16,7 +16,3 @@ cat3 = Cat("Ponce", 2, 7, 6, "Male")
 def get_oldest(*args):
     return max(args)
 
-
-print(f"The oldest cat, {get_oldest(cat1.name, cat2.name, cat3.name)} is {get_oldest(cat1.age, cat2.age, cat3.age)} years old.")
-
-
