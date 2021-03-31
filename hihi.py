@@ -27,6 +27,7 @@ def accumulator(acc, item):
 # 1 Capitalize all of the pet names and print the list
 my_pets = ['sisi', 'bibi', 'titi', 'carla']
 
+# print(string.ascii_letters)
 
 def to_capital(item):
     return item.upper()
@@ -35,7 +36,7 @@ def to_capital(item):
 # print(list(map(to_capital, my_pets)))
 
 # 2 Zip the 2 lists into a list of tuples, but sort the numbers from lowest to highest.
-my_strings = ['a', 'b', 'c', 'd', 'e']
+my_strings = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
 my_numbers = [5, 4, 3, 2, 1]
 
 
@@ -80,5 +81,10 @@ simple_dictionary = {
 my_dictionary = {key: value ** 2 for key, value in simple_dictionary.items() if value % 2 == 0}
 
 my_dictionary2 = {my_pets[num - 1]: num for num in range(1, 5)}
-print(my_dictionary2)
+# print(my_dictionary2)
 
+
+some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n']
+duplicates = list(set([x for x in some_list if some_list.count(x) > 1]))
+
+print(duplicates)
