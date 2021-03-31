@@ -22,6 +22,7 @@ class PlayerCharacter:
     def suicide(self):
         print(f"{self.name} has killed themself.")
 
+
 class Wizard(PlayerCharacter):
     def __init__(self, power, magic_type, gender, name, color, age, attack_power):
         super().__init__(gender, name, color, age, attack_power)
@@ -29,7 +30,7 @@ class Wizard(PlayerCharacter):
         self.magic_type = magic_type
 
     def attack(self):
-        print(f'attacking with power of {self.magic_type}')
+        print(f'Attacking with power of {self.magic_type}')
 
 
 class Archer(PlayerCharacter):
@@ -39,7 +40,7 @@ class Archer(PlayerCharacter):
         self.arrow_type = arrow_type
 
     def attack(self):
-        print(f'attacking with {self.arrow_type}')
+        print(f'Attacking with {self.arrow_type}')
 
 
 class Warrior(PlayerCharacter):
@@ -49,7 +50,7 @@ class Warrior(PlayerCharacter):
         self.weapon_type = weapon_type
 
     def attack(self):
-        print(f'attacking with {self.weapon_type}')
+        print(f'Attacking with {self.weapon_type}')
 
 
 player1 = Warrior(20, "Sword", 'M', 'Andy', 'blue', 44, 10)

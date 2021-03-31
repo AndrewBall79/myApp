@@ -20,11 +20,24 @@ def player_vs_enemy():
         print(f"{player1.name} has been killed by {cat2.name}")
 
 
-player_vs_enemy()
-# player1.attack()
-# cat1.walk()
-# print(cat1.name)
+player_move = input('What is your move? ')
 
+if player_move == "kill":
+    player1.kill()
+elif player_move == "attack":
+    player1.attack()
+elif player_move == "shout":
+    player1.shout()
+elif player_move == "run":
+    player1.run()
+elif player_move == "suicide":
+    player1.suicide()
+elif player_move == "look for monster":
+    cat1.walk()
+elif player_move == "cry":
+    print(f'I\'m am {player1.name} and I am not ashamed of my tears')
+else:
+    print('You can\'t do that')
 
 
 
