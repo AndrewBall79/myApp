@@ -14,16 +14,17 @@ class App:
 
 
 def player_vs_enemy():
-    if cat1.hp - player1.attack_power <= 0:
-        print(f"{cat1.name} has been killed")
+    if cat2.hp - player1.attack_power <= 0:
+        print(f"{cat2.name} has been killed by {player1.name}")
     else:
-        print(f"{player1.name} has been killed!")
+        print(f"{player1.name} has been killed by {cat2.name}")
 
 
 player_vs_enemy()
 # player1.attack()
 # cat1.walk()
 # print(cat1.name)
+
 
 
 

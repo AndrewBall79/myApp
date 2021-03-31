@@ -26,7 +26,7 @@ class Cat:
 
 
 cat1 = Cat("Bootsie", 4, 7, 10, "Male", 10)
-cat2 = Cat("Sophie", 9, 11, 8, "Female", 10)
+cat2 = Cat("Sophie", 9, 11, 8, "Female", 100)
 cat3 = Cat("Ponce", 2, 7, 6, "Male", 10)
 
 

@@ -19,6 +19,8 @@ class PlayerCharacter:
     def kill(self):
         print(f'I am {self.name} and I\'m ready to kill')
 
+    def suicide(self):
+        print(f"{self.name} has killed themself.")
 
 class Wizard(PlayerCharacter):
     def __init__(self, power, magic_type, gender, name, color, age, attack_power):
