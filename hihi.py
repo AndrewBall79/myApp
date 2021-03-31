@@ -1,3 +1,4 @@
+import string
 from functools import reduce
 
 my_list = [1, 2, 3, 4, 5, 6, 7, 8]
@@ -16,12 +17,12 @@ def accumulator(acc, item):
     return acc + item
 
 
-print(list(filter(check_odd, my_list)))
-print(list(map(multiply_by2, my_list)))
-print(list(map(lambda item: item*2, my_list)))
-print(list(zip(my_list, your_list)))
-print(reduce(accumulator, my_list, 0))
-print(reduce(lambda acc, item: acc+item, my_list))
+# print(list(filter(check_odd, my_list)))
+# print(list(map(multiply_by2, my_list)))
+# print(list(map(lambda item: item * 2, my_list)))
+# print(list(zip(my_list, your_list)))
+# print(reduce(accumulator, my_list, 0))
+# print(reduce(lambda acc, item: acc + item, my_list))
 
 # 1 Capitalize all of the pet names and print the list
 my_pets = ['sisi', 'bibi', 'titi', 'carla']
@@ -31,7 +32,7 @@ def to_capital(item):
     return item.upper()
 
 
-print(list(map(to_capital, my_pets)))
+# print(list(map(to_capital, my_pets)))
 
 # 2 Zip the 2 lists into a list of tuples, but sort the numbers from lowest to highest.
 my_strings = ['a', 'b', 'c', 'd', 'e']
@@ -42,7 +43,7 @@ def sort(item):
     return sorted(item)
 
 
-print(list(zip(sort(my_list), my_strings)))
+# print(list(zip(sort(my_list), my_strings)))
 
 # 3 Filter the scores that pass over 50%
 scores = [73, 20, 65, 19, 76, 100, 88]
@@ -52,4 +53,32 @@ def check_pass(item):
     return item >= 50
 
 
-print(list(filter(check_pass, scores)))
+# print(list(filter(check_pass, scores)))
+
+# Lambda to the power of x
+powers_list = [5, 4, 3]
+
+# print(list(map(lambda num: pow(num, 2), powers_list)))
+
+# list Sorting
+a = [(0, 2), (4, 3), (9, 9), (10, -1)]
+a.sort(key=lambda x: x[1])
+# print(a)
+
+# list, set, dictionary Comprehensions
+
+my_comprehensive_list = [char for char in "hello"]
+my_comprehensive_list2 = [num for num in range(0, 100)]
+my_comprehensive_list3 = [num * 2 for num in range(0, 100)]
+my_comprehensive_set = {num ** 2 for num in range(0, 100) if num % 2 == 0}
+simple_dictionary = {
+    'a': 1,
+    'b': 2,
+    'c': 3,
+    'd': 4
+}
+my_dictionary = {key: value ** 2 for key, value in simple_dictionary.items() if value % 2 == 0}
+
+my_dictionary2 = {my_pets[num - 1]: num for num in range(1, 5)}
+print(my_dictionary2)
+
