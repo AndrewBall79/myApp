@@ -27,8 +27,8 @@ def accumulator(acc, item):
 # 1 Capitalize all of the pet names and print the list
 my_pets = ['sisi', 'bibi', 'titi', 'carla']
 
-# print(string.ascii_letters)
 
+# print(string.ascii_letters)
 def to_capital(item):
     return item.upper()
 
@@ -87,4 +87,17 @@ my_dictionary2 = {my_pets[num - 1]: num for num in range(1, 5)}
 some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n']
 duplicates = list(set([x for x in some_list if some_list.count(x) > 1]))
 
-print(duplicates)
+# print(duplicates)
+
+
+def my_decorator(func):
+    def wrap_func():
+        print('*****')
+        func()
+        print('*****')
+    return wrap_func()
+
+
+@my_decorator
+def hello():
+    print('hello')
