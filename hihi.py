@@ -91,13 +91,16 @@ duplicates = list(set([x for x in some_list if some_list.count(x) > 1]))
 
 
 def my_decorator(func):
-    def wrap_func():
+    def wrap_func(*x, **y):
         print('*****')
-        func()
+        func(*x, **y)
         print('*****')
-    return wrap_func()
+    return wrap_func
 
 
 @my_decorator
-def hello():
-    print('hello')
+def hello(*args, emoji=":("):
+    print(*args, emoji)
+
+
+hello("hi", ':(', 'chosen')
