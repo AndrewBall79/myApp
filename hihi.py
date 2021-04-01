@@ -1,5 +1,8 @@
 import string
 from functools import reduce
+from time import time
+
+from Progs import performance
 
 my_list = [1, 2, 3, 4, 5, 6, 7, 8]
 your_list = [9, 10, 11, 12, 13, 14, 15, 16]
@@ -87,6 +90,7 @@ my_dictionary2 = {my_pets[num - 1]: num for num in range(1, 5)}
 some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n']
 duplicates = list(set([x for x in some_list if some_list.count(x) > 1]))
 
+
 # print(duplicates)
 
 
@@ -95,6 +99,7 @@ def my_decorator(func):
         print('*****')
         func(*x, **y)
         print('*****')
+
     return wrap_func
 
 
@@ -103,4 +108,49 @@ def hello(*args, emoji=":("):
     print(*args, emoji)
 
 
-hello("hi", ':(', 'chosen')
+# hello("hi", ':(', 'chosen')
+
+
+@performance
+def long_time():
+    for i in range(1):
+        i * 5
+
+
+# Create an @authenticated decorator that only allows the function to run is user1 has 'valid' set to True:
+user1 = {
+    'name': 'Sorna',
+    'valid': True  # changing this will either run or not run the message_friends function.
+}
+
+
+def authenticated(fn):
+    def wrapper(*args, **kwargs):
+        if args[0]['valid']:
+            return fn(*args, **kwargs)
+
+    return wrapper
+
+
+@authenticated
+def message_friends(user):
+    print('message has been sent')
+
+
+# message_friends(user1)
+
+# Error Handling
+
+while True:
+    try:
+        age = float(input('Enter your age '))
+        10/age
+    except ValueError:
+        print("Sorry please enter a number")
+    except ZeroDivisionError:
+        print("Sorry, zero year olds can't play")
+    else:
+        print('Thanks!')
+        break
+
+
