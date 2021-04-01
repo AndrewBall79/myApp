@@ -141,16 +141,41 @@ def message_friends(user):
 
 # Error Handling
 
-while True:
+# while True:
+#     try:
+#         age = float(input('Enter your age '))
+#         10/age
+#     except ValueError:
+#         print("Sorry please enter a number")
+#         continue
+#     except ZeroDivisionError:
+#         print("Sorry, zero year olds can't play")
+#         break
+#     else:
+#         print('Thanks!')
+#         break
+#     finally:
+#         print('***')
+
+def sum_of_something(num1, num2):
     try:
-        age = float(input('Enter your age '))
-        10/age
-    except ValueError:
-        print("Sorry please enter a number")
-    except ZeroDivisionError:
-        print("Sorry, zero year olds can't play")
-    else:
-        print('Thanks!')
-        break
+        return num1 + num2
+    except TypeError as err:
+        print(f'please enter numbers {err}')
+
+
+range(100)
+list(range(100))
+
+# def make_list(num):
+#     result = []
+#     for i in range(num):
+#         result.append(i*2)
+#     return result
+#
+#
+# my_list80 = make_list(100)
+# print(my_list80)
+
 
 
