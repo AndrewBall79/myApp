@@ -9,3 +9,11 @@ def performance(fn):
         print(f'took {t2-t1} ms')
         return result
     return wrapper
+
+
+def multiply(num1, num2):
+    return num1 * num2
+
+
+def divide(num1, num2):
+    return num1 / num2

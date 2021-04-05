@@ -2,7 +2,7 @@ import string
 from functools import reduce
 from time import time
 
-from Progs import performance
+from utility import performance
 
 my_list = [1, 2, 3, 4, 5, 6, 7, 8]
 your_list = [9, 10, 11, 12, 13, 14, 15, 16]
@@ -65,8 +65,8 @@ powers_list = [5, 4, 3]
 # print(list(map(lambda num: pow(num, 2), powers_list)))
 
 # list Sorting
-a = [(0, 2), (4, 3), (9, 9), (10, -1)]
-a.sort(key=lambda x: x[1])
+az = [(0, 2), (4, 3), (9, 9), (10, -1)]
+az.sort(key=lambda x: x[1])
 # print(a)
 
 # list, set, dictionary Comprehensions
@@ -156,16 +156,16 @@ def message_friends(user):
 #         break
 #     finally:
 #         print('***')
+#
+# def sum_of_something(num1, num2):
+#     try:
+#         return num1 + num2
+#     except TypeError as err:
+#         print(f'please enter numbers {err}')
 
-def sum_of_something(num1, num2):
-    try:
-        return num1 + num2
-    except TypeError as err:
-        print(f'please enter numbers {err}')
 
-
-range(100)
-list(range(100))
+# range(100)
+# list(range(100))
 
 # def make_list(num):
 #     result = []
@@ -178,4 +178,30 @@ list(range(100))
 # print(my_list80)
 
 
+def fib(n):
+    a, b, counter = 0, 1, 0
+    while True:
+        if counter > n:
+            return
+        yield a
+        a, b = b, a + b
+        counter += 1
 
+
+# f = fib(20)
+# for x in f:
+#     print(x)
+
+
+def fib1(number):
+    a, b = 0, 1
+    for i in range(number):
+        yield a
+        a, b = b, a + b
+
+
+# for x in fib1(20):
+#     print(x)
+
+
+print("Yes") if 5 > 2 else print("No")

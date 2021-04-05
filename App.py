@@ -1,4 +1,5 @@
-
+from shopping import shopping_cart
+from utility import *
 from Monsters import *
 from player import *
 
@@ -20,8 +21,8 @@ def player_vs_enemy():
         print(f"{player1.name} has been killed by {cat2.name}")
 
 
-
 player_move = input('What is your move? ')
+
 
 if player_move == "kill":
     player1.kill()
@@ -39,8 +40,5 @@ elif player_move == "cry":
     print(f'I\'m am {player1.name} and I am not ashamed of my tears')
 else:
     print('You can\'t do that')
-
-
-
 
 
