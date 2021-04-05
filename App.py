@@ -1,3 +1,5 @@
+from random import shuffle, choice
+
 from shopping import shopping_cart
 from utility import *
 from Monsters import *
@@ -42,3 +44,8 @@ else:
     print('You can\'t do that')
 
 
+# Modules from Random that are useful to the "game"
+# print(choice([1, 2, 3, 4, 5]))
+# player_order = [player1, player2, player3, player4]
+# shuffle(player_order)
+# print(player_order)
