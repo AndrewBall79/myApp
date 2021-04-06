@@ -21,4 +21,3 @@ while True:
     except ValueError:
         print("please enter a real number")
         continue
-
