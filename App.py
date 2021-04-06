@@ -1,10 +1,9 @@
 from random import shuffle, choice
-
-from shopping import shopping_cart
-from utility import *
 from Monsters import *
 from player import *
+import sys
 
+sys.argv
 
 class App:
     # print(f"The oldest cat, {get_oldest(cat1.name, cat2.name, cat3.name)} is {get_oldest(cat1.age, cat2.age, cat3.age)} years old.")
