@@ -9,3 +9,11 @@ print(Counter(li))
 
 dictionary = defaultdict(lambda: 5, {"a": 1, "b": 2})
 print(dictionary['c'])
+
+d = OrderedDict()
+d['a'] = 1
+d['b'] = 2
+
+d2 = OrderedDict()
+d2['a'] = 1
+d2['b'] = 2
