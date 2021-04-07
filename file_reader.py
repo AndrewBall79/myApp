@@ -1,5 +1,11 @@
-my_file = open('test.txt', 'a')
+try:
+    with open('test.txt', 'a') as my_file:
+        print(my_file.write(""))
+except FileNotFoundError as err:
+    print('Filo no existo')
+    raise err
+except IOError as err:
+    print('IO error')
+    raise err
 
-print(my_file.write("\nhe was an alcoholic"))
 
-my_file.close()
