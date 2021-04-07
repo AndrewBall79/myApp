@@ -1,10 +1,26 @@
 import re
 
-pattern = re.compile(r'[a-zA-Z]+/')
-string = 'B4nn4puDD!?'
+regex = '^(\w|\.|\_|\-)+[@](\w|\_|\-|\.)+[.]\w{2,3}$'
+regex_pass = '[a-zA-Z0-9!@#$%^&*()]{8,}\d'
 
-a = pattern.search(string)
-b = pattern.findall(string)
-c = pattern.fullmatch(string)
-d = pattern.match(string)
-print(a, b, c, d)
+
+def check(email):
+    if re.search(regex, email):
+        print("Valid Email")
+    else:
+        print("Invalid Email")
+
+
+def check_pass(password):
+    if re.search(regex_pass, password):
+        print("Valid Password")
+    else:
+        print("Invalid Password")
+
+
+if __name__ == '__main__':
+    email = "someemail@gmail.com"
+    password = 'aArde!@12'
+
+    check(email)
+    check_pass(password)
