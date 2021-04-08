@@ -5,6 +5,7 @@ import sys
 
 sys.argv
 
+
 class App:
     # print(f"The oldest cat, {get_oldest(cat1.name, cat2.name, cat3.name)} is {get_oldest(cat1.age, cat2.age, cat3.age)} years old.")
     for player in all_players:
@@ -22,25 +23,25 @@ def player_vs_enemy():
         print(f"{player1.name} has been killed by {cat2.name}")
 
 
-player_move = input('What is your move? ')
-
-
-if player_move == "kill":
-    player1.kill()
-elif player_move == "attack":
-    player1.attack()
-elif player_move == "shout":
-    player1.shout()
-elif player_move == "run":
-    player1.run()
-elif player_move == "suicide":
-    player1.suicide()
-elif player_move == "look for monster":
-    cat1.walk()
-elif player_move == "cry":
-    print(f'I\'m am {player1.name} and I am not ashamed of my tears')
-else:
-    print('You can\'t do that')
+while True:
+    player_move = input('What is your move? ')
+    if player_move == "kill":
+        player1.kill()
+    elif player_move == "attack":
+        player1.attack()
+    elif player_move == "shout":
+        player1.shout()
+    elif player_move == "run":
+        player1.run()
+    elif player_move == "look for monster":
+        cat1.walk()
+    elif player_move == "cry":
+        print(f'I\'m am {player1.name} and I am not ashamed of my tears')
+    elif player_move == "suicide":
+        player1.suicide()
+        break
+    else:
+        print('You can\'t do that')
 
 
 # Modules from Random that are useful to the "game"
